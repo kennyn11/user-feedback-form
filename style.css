@@ -5,7 +5,6 @@ input, textarea { width: 100%; padding: 10px; margin-top: 5px; box-sizing: borde
 .char-count { font-size: 0.8rem; color: #000000; }
 button { padding: 10px 20px; cursor: pointer; background: #448ad4; color: white; border: none; border-radius: 4px; }
 
-/* Tooltip styles */
 #tooltip-box {
     position: absolute;
     background: #333;
