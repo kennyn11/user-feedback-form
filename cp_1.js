@@ -40,9 +40,6 @@ form.addEventListener('mouseover', function(event) {
     }
 });
 
-
-
-
 form.addEventListener('click', function(event) {
     event.stopPropagation();
     console.log('Clicked inside the form - propagation stopped.');
@@ -57,7 +54,7 @@ document.body.addEventListener('click', function() {
 form.addEventListener('submit', function(event) {
     event.preventDefault(); 
 
-    // Basic Validation
+    // Validation
     if(username.value.trim() === '' || email.value.trim() === '' || feedback.value.trim() === '') {
         alert('Please fill out all fields before submitting.');
         return;
