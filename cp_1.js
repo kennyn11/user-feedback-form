@@ -53,9 +53,9 @@ document.body.addEventListener('click', function() {
     console.log('Background clicked');
 });
 
-// --- Step 3: Form Submission & Validation ---
+// Form Submission & Validation 
 form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Stop page reload
+    event.preventDefault(); 
 
     // Basic Validation
     if(username.value.trim() === '' || email.value.trim() === '' || feedback.value.trim() === '') {
