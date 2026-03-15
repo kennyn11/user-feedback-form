@@ -10,7 +10,7 @@ const feedbackCounter = document.getElementById('comments-counter');
 
 const feedbackdisplay = document.getElementById('submitted-feedback');
 
-// --- Step 3 & 4: Event Delegation for Input Counting ---
+// Event Delegation for Input Counting 
 form.addEventListener('input', function(event) {
     if (event.target.id === 'username') {
         nameCounter.textContent = username.value.length + '/50';
@@ -25,7 +25,7 @@ form.addEventListener('input', function(event) {
     }
 }); 
 
-// --- Step 3 & 4: Tooltips via 'title' attribute ---
+// Tooltips
 form.addEventListener('mouseover', function(event) {
     if (event.target.id === 'username') {
         username.title = 'Please enter your name (max 50 characters)';
@@ -40,15 +40,15 @@ form.addEventListener('mouseover', function(event) {
     }
 });
 
-// --- Step 5: Prevent Background Clicks (Propagation) ---
 
-// When we click the form, stop the event so it doesn't reach 'body'
+
+
 form.addEventListener('click', function(event) {
     event.stopPropagation();
     console.log('Clicked inside the form - propagation stopped.');
 });
 
-// This will now trigger ONLY when you click outside the form
+
 document.body.addEventListener('click', function() {
     console.log('Background clicked');
 });
@@ -63,7 +63,7 @@ form.addEventListener('submit', function(event) {
         return;
     }
 
-    // Dynamically append feedback
+    // Feedback
     const newFeedback = document.createElement('p');
     newFeedback.style.borderBottom = "1px solid #ccc";
     newFeedback.innerHTML = `<strong>Name:</strong> ${username.value}<br> 
