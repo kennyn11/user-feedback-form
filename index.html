@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <div class="container">
+        <h2>Send us your thoughts</h2>
+        <form id="feedback-form">
+        
+            <div class="field-group">
+                <textarea id="comments" name="comments" placeholder="Comments" data-tooltip="Share us your thoughts!"></textarea>
+            </div>
+            <button type="submit">Submit Feedback</button>
+        
+        </form>
+
+        <hr>
+        <h3>Feedback Entries</h3>
+        <div id="feedback-display"></div>
+    </div>
+    <div id="tooltip-box" class="hidden"></div>
+    <script src="cp_1.js"></script>
 </body>
 </html>
