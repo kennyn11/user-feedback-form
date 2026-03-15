@@ -9,33 +9,35 @@
 <body>
 
     <div class="container">
-        <h2>Send us your thoughts</h2>
+        <h2>Submit Your Feedback</h2>
+        
         <form id="feedback-form">
             <div class="field-group">
-                <input type="text" id="username" name="username" placeholder="User Name" data-tooltip="Enter your full name">
-                <span class="char-count">0 characters</span>
+                <label for="username">User Name:</label>
+                <input type="text" id="username" placeholder="Enter your name">
+                <small id="name-counter">0/50</small>
             </div>
 
             <div class="field-group">
-                <input type="email" id="email" name="email" placeholder="Email Address" data-tooltip="Enter your email">
-                <span class="char-count">0 characters</span>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email">
+                <small id="email-counter">0/80</small>
             </div>
 
             <div class="field-group">
-                <textarea id="comments" name="comments" placeholder="Comments" data-tooltip="Share us your feedback!"></textarea>
-                <span class="char-count">0 characters</span>
+                <label for="comments">Comments:</label>
+                <textarea id="comments" placeholder="Share your feedback"></textarea>
+                <small id="comments-counter">0/500</small>
             </div>
 
-            <button type="submit">Submit Feedback</button>
-            <p id="error-msg" style="color: red;"></p>
+            <button type="submit">Submit</button>
         </form>
 
         <hr>
-        <h3>Feedback Entries</h3>
-        <div id="feedback-display"></div>
+        <h3>Feedback Display</h3>
+        <div id="submitted-feedback">
+            </div>
     </div>
-
-    <div id="tooltip-box" class="hidden"></div>
 
     <script src="cp_1.js"></script>
 </body>
